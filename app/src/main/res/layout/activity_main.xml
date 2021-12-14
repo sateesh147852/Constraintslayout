@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@color/purple_200"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_baseline_settings_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_baseline_photo_camera_24"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@mipmap/ic_launcher"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sateesh Chikkalagi"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="@id/ivProfile"
+        app:layout_constraintStart_toStartOf="@id/ivProfile"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBrief"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="I am a programmer, specialising in Android app development with
+great interest to the game development"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tvFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/following_background"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Following"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/tvMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBrief" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/following_background"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Message"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvFollow"
+        app:layout_constraintTop_toBottomOf="@id/tvBrief" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="#808080"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFollow" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNumLikes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="235"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvNumShares"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNumShares"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="535"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvNumViews"
+        app:layout_constraintStart_toEndOf="@+id/tvNumLikes"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNumViews"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="475"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNumShares"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Likes"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/tvNumLikes"
+        app:layout_constraintStart_toStartOf="@+id/tvNumLikes"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumLikes" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shares"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/tvNumShares"
+        app:layout_constraintStart_toStartOf="@+id/tvNumShares"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumShares" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Views"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/tvNumViews"
+        app:layout_constraintStart_toStartOf="@+id/tvNumViews"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumViews" />
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="#808080"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/tvNumLikes"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="#808080"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/tvNumShares"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#808080"
+        app:layout_constraintTop_toBottomOf="@+id/tvLikes" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="@id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
