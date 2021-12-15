@@ -13,3 +13,5 @@
 6. vertical_chains_two: vertical chains two example
 
 7. weight: weight example
+
+8. horizontal_weight: horizontal weight example
