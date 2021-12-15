@@ -11,3 +11,5 @@
 5. vertical_chains: vertical chains example
 
 6. vertical_chains_two: vertical chains two example
+
+7. weight: weight example
