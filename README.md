@@ -7,3 +7,7 @@
 3. guideline_layout: guideline example
 
 4. horizontal_chains: horizontal chains example
+
+5. vertical_chains: vertical chains example
+
+6. vertical_chains_two: vertical chains example
