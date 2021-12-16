@@ -17,3 +17,7 @@
 8. horizontal_weight: horizontal weight example
 
 9. horizontal_vertical_chains: horizontal vertical chains example
+
+10. button shrink
+
+11. aspect ratio
